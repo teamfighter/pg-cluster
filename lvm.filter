@@ -1,0 +1,2 @@
+filter =  [ "r|/dev/xvdb|", "r|/dev/disk/*|", "r|/dev/block/*|", "a|.*|" ]
+filter = [ "a|drbd.*|", "r|.*|" ]

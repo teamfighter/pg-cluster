@@ -1,0 +1,13 @@
+auto eth0
+iface eth0 inet dhcp
+post-up ip route add default via 172.31.16.1 dev eth0 tab 1
+post-up ip rule add from 172.31.18.216 tab 1
+pre-down ip rule del from 172.31.18.216 tab 1
+pre-down ip route del default via 172.31.16.1 dev eth0 tab 1
+ 
+auto eth1
+iface eth1 inet dhcp
+post-up ip route add default via 172.31.16.1 dev eth1 tab 2
+post up ip rule add from 172.31.29.237 tab 2
+pre-down ip rule del from 172.31.29.237 tab 2
+pre-down ip route del default via 172.31.0.1 dev eth1 tab 2
